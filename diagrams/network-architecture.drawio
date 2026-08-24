@@ -1,0 +1,65 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Network Architecture" id="network-architecture">
+    <mxGraphModel dx="800" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="internet" value="INTERNET" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8e8e8;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="340" y="40" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="router" value="HOME ROUTER" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbe9f6;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="340" y="160" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="pi" value="RASPBERRY PI" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#f5f5f5;strokeColor=#888888;fontStyle=1;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="220" y="280" width="400" height="160" as="geometry" />
+        </mxCell>
+
+        <mxCell id="pihole" value="Pi-hole&#10;(Docker)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5f0d5;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="260" y="340" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tailscale" value="Tailscale&#10;(native service)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e3f0;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="440" y="340" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="tailnet" value="TAILNET" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8e8e8;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="340" y="480" width="160" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="laptop" value="Laptop" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="200" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="phone" value="Phone" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="360" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="desktop" value="Desktop" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="520" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" edge="1" parent="1" source="internet" target="router">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" edge="1" parent="1" source="router" target="pi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" edge="1" parent="1" source="tailscale" target="tailnet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" edge="1" parent="1" source="tailnet" target="laptop">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" edge="1" parent="1" source="tailnet" target="phone">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" edge="1" parent="1" source="tailnet" target="desktop">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
