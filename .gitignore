@@ -1,3 +1,7 @@
 .env
 .env.*
 !.env.example
+
+# Pi-hole persisted data (contains DNS query logs / browsing history)
+etc-pihole/
+etc-dnsmasq.d/

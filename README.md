@@ -17,6 +17,12 @@ A Raspberry Pi-based personal homelab providing network-wide DNS filtering ([Pi-
 - [Networking](./docs/networking.md) — ports, IPs, and DNS resolution paths
 - [Security](./docs/security.md) — secrets, exposure, and hardening notes
 
+## Screenshots
+
+| Pi-hole dashboard | Tailscale admin console |
+|---|---|
+| ![Pi-hole dashboard](./screenshots/pihole_screenshot.png) | ![Tailscale admin console](./screenshots/tailscale-dash.png) |
+
 ## Getting started
 
 ```bash

@@ -27,6 +27,8 @@ Tailscale's main job here is to let the Pi's Pi-hole instance act as the **DNS s
 
 See [docs/networking.md](../../docs/networking.md) for the full DNS request flow and [docs/architecture.md](../../docs/architecture.md) for how this fits into the overall design.
 
+![Tailscale admin console](../../screenshots/tailscale-dash.png)
+
 ## Useful commands
 
 ```bash

@@ -51,6 +51,8 @@ docker compose pull pihole && docker compose up -d pihole
 
 Admin UI: `http://<pi-lan-or-tailnet-ip>:8080/admin`
 
+![Pi-hole dashboard](../../screenshots/pihole_screenshot.png)
+
 ## Setting devices to use it
 
 - **LAN devices**: point their DNS (or your router's DHCP DNS setting) at the Pi's LAN IP.

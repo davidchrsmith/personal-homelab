@@ -21,14 +21,14 @@ Editable source: [diagrams/network-architecture.drawio](../diagrams/network-arch
 flowchart LR
     subgraph Home LAN
         Pi[Raspberry Pi]
-        Pihole[(Pi-hole\nDocker container)]
+        Pihole[(Pi-hole<br/>Docker container)]
         Router[Home Router]
         LANDevice[LAN Device]
     end
 
     subgraph Tailnet
-        TSD[Tailscale daemon\nnative service]
-        Remote[Remote Device\ne.g. phone, laptop]
+        TSD[Tailscale daemon<br/>native service]
+        Remote[Remote Device<br/>e.g. phone, laptop]
     end
 
     LANDevice -- DNS queries --> Pihole
