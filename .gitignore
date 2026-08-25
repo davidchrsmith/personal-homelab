@@ -5,3 +5,10 @@
 # Pi-hole persisted data (contains DNS query logs / browsing history)
 etc-pihole/
 etc-dnsmasq.d/
+
+# Invidious persisted data + upstream files fetched by services/invidious/README.md's
+# one-time setup step (not vendored in this repo, same as Pi-hole's image isn't)
+services/invidious/pgdata/
+services/invidious/companioncache/
+services/invidious/config/
+services/invidious/init-invidious-db.sh

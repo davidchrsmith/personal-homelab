@@ -14,7 +14,7 @@
         </mxCell>
 
         <mxCell id="pi" value="RASPBERRY PI" style="rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fillColor=#f5f5f5;strokeColor=#888888;fontStyle=1;spacingTop=8;" vertex="1" parent="1">
-          <mxGeometry x="220" y="280" width="400" height="160" as="geometry" />
+          <mxGeometry x="220" y="280" width="400" height="240" as="geometry" />
         </mxCell>
 
         <mxCell id="pihole" value="Pi-hole&#10;(Docker)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5f0d5;strokeColor=#333333;" vertex="1" parent="1">
@@ -25,20 +25,24 @@
           <mxGeometry x="440" y="340" width="140" height="70" as="geometry" />
         </mxCell>
 
+        <mxCell id="invidious" value="Invidious&#10;(Docker, tailnet-only)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e6d5f0;strokeColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="350" y="430" width="140" height="70" as="geometry" />
+        </mxCell>
+
         <mxCell id="tailnet" value="TAILNET" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e8e8e8;strokeColor=#333333;" vertex="1" parent="1">
-          <mxGeometry x="340" y="480" width="160" height="60" as="geometry" />
+          <mxGeometry x="340" y="560" width="160" height="60" as="geometry" />
         </mxCell>
 
         <mxCell id="laptop" value="Laptop" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#333333;" vertex="1" parent="1">
-          <mxGeometry x="200" y="600" width="120" height="60" as="geometry" />
+          <mxGeometry x="200" y="680" width="120" height="60" as="geometry" />
         </mxCell>
 
         <mxCell id="phone" value="Phone" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#333333;" vertex="1" parent="1">
-          <mxGeometry x="360" y="600" width="120" height="60" as="geometry" />
+          <mxGeometry x="360" y="680" width="120" height="60" as="geometry" />
         </mxCell>
 
         <mxCell id="desktop" value="Desktop" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#333333;" vertex="1" parent="1">
-          <mxGeometry x="520" y="600" width="120" height="60" as="geometry" />
+          <mxGeometry x="520" y="680" width="120" height="60" as="geometry" />
         </mxCell>
 
         <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" edge="1" parent="1" source="internet" target="router">
@@ -57,6 +61,9 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" edge="1" parent="1" source="tailnet" target="desktop">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="tailscale serve" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;dashed=1;" edge="1" parent="1" source="tailnet" target="invidious">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>

@@ -1,6 +1,6 @@
 # Pi-hole
 
-Network-wide DNS-based ad/tracker blocker, running as a Docker container defined in the repo's root [`docker-compose.yaml`](../../docker-compose.yaml).
+Network-wide DNS-based ad/tracker blocker, running as a Docker container defined in this folder's [`docker-compose.yaml`](./docker-compose.yaml).
 
 ## What it does
 
@@ -36,6 +36,8 @@ These are bind-mounted so Pi-hole's configuration and stats persist across conta
 ## Usage
 
 ```bash
+cd services/pihole
+
 # copy the example env file and fill in real values
 cp .env.example .env
 

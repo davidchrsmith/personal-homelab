@@ -11,7 +11,7 @@ Both faces can reach Pi-hole for DNS resolution.
 
 ## Pi-hole
 
-Defined in [`docker-compose.yaml`](../docker-compose.yaml):
+Defined in [`services/pihole/docker-compose.yaml`](../services/pihole/docker-compose.yaml):
 
 | Port | Protocol | Purpose |
 |---|---|---|
@@ -51,7 +51,18 @@ sequenceDiagram
     end
 ```
 
+## Invidious
+
+Defined in [`services/invidious/docker-compose.yaml`](../services/invidious/docker-compose.yaml):
+
+| Port | Protocol | Purpose |
+|---|---|---|
+| 3000 | TCP | Invidious web UI/API — bound to the Pi only, not published to the LAN |
+
+Unlike Pi-hole, Invidious is not reachable via a raw IP:port. It's published exclusively through `tailscale serve`, which terminates HTTPS (with a Tailscale-issued cert) at a `*.ts.net` hostname and reverse-proxies to `127.0.0.1:3000`. There is no LAN exposure and no router port forwarding — tailnet membership is the only way in.
+
 ## Notes / things to keep in mind
 
 - The Pi-hole admin UI (port 8080) is only bound to the host; it is **not** exposed to the public internet. The only ways to reach it are the LAN or the tailnet.
+- Invidious (port 3000) is similarly only bound to the host, and is additionally only reachable through the `tailscale serve` HTTPS hostname — not via `<pi-ip>:3000` directly, even from the LAN.
 - If the Pi's LAN IP changes (e.g. DHCP lease renewal), LAN devices that manually point at it for DNS will need updating — a static DHCP reservation for the Pi is recommended.
