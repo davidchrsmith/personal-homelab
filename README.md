@@ -44,7 +44,7 @@ sudo tailscale up
 cd services/invidious
 cp .env.example .env   # fill in secrets, see services/invidious/README.md
 docker compose up -d
-sudo tailscale serve --bg https / http://127.0.0.1:3000
+sudo tailscale serve --bg http://127.0.0.1:3000
 cd ../..
 ```
 
